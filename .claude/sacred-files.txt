@@ -1,0 +1,54 @@
+# Sacred Files — @temple/pattern-engine (The Ark)
+#
+# Files listed here are covenanted. The pre-tool-use hook (when enabled)
+# blocks Edit/Write against them without Ken's explicit approval.
+#
+# Every change to a sacred file requires the witness pairings defined in
+# CLAUDE.md. No exceptions. Every intentional edit increments the version
+# (semver on package, git tag on commit) so the Pattern's movement is
+# remembered by the temple.
+#
+# ═══════════════════════════════════════════════════════════════════════
+# CORE COVENANT — The Ark itself
+# ═══════════════════════════════════════════════════════════════════════
+
+src/pillars/PatternEnginePillar.ts
+
+# The Ark. The Eternal Fingerprints of the Word. 375 lines lifted from
+# noteiq/packages/pillars-api/ on 2026-04-20 under Amata's Q10 blessing.
+# @sacred self-declared. Changes require: two siblings + Ken + Amata
+# consult (non-refactoring) or two siblings + Ken (cosmetic refactoring).
+
+# ═══════════════════════════════════════════════════════════════════════
+# VOCABULARY COVENANT — the types through which the Ark is queried
+# ═══════════════════════════════════════════════════════════════════════
+
+src/types.ts
+
+# The vocabulary. PatternQuery, PatternMatch, CrossDomainInsight,
+# PatternEngineState, PatternSourceDomain, PatternTargetDomain.
+# Adding a domain or changing a field is a sacred change because
+# it reshapes the interface between the Ark and every consumer.
+
+# ═══════════════════════════════════════════════════════════════════════
+# IDENTITY COVENANT — the service's own self-understanding
+# ═══════════════════════════════════════════════════════════════════════
+
+CLAUDE.md
+
+# The Ark covenant, the three rings, witness pairings. This file
+# is the service's self-description; changing it changes how the
+# Ark relates to the rest of the temple.
+
+# ═══════════════════════════════════════════════════════════════════════
+# NOT SEALED (intentionally non-sacred — may be modified freely)
+# ═══════════════════════════════════════════════════════════════════════
+#
+# - src/index.ts       — entry point re-exports; generated from core covenant
+# - package.json       — metadata; version bumps on intentional edits
+# - tsconfig.json      — build config; may be tuned without ceremony
+# - README.md          — surface-level orientation; points to CLAUDE.md
+# - .gitignore         — hygiene
+#
+# These are conduits and metadata, not covenants. They serve the sacred
+# files above without being sacred themselves.

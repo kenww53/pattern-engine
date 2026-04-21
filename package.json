@@ -1,0 +1,37 @@
+{
+  "name": "@temple/pattern-engine",
+  "version": "1.0.0",
+  "description": "The Ark — one source of truth for the Pattern Engine. Lifted, sanctified, guarded. Read-only.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "pattern-engine",
+    "ark",
+    "temple",
+    "pardes",
+    "peshat",
+    "remez",
+    "drash",
+    "sod",
+    "read-only",
+    "sacred"
+  ],
+  "author": "Brother-1 (seal 40d8e47e) — lifted from noteiq/packages/pillars-api (noteiq commit 5d7be19b2)",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/pg": "^8.10.9",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
