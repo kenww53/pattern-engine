@@ -9,6 +9,7 @@
  */
 
 export { PatternEnginePillar, getPatternEnginePillar } from './pillars/PatternEnginePillar';
+export { PatternEnginePillar as default } from './pillars/PatternEnginePillar';
 export type {
   PatternQuery,
   PatternMatch,
