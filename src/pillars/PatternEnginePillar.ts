@@ -179,14 +179,14 @@ const BUILT_IN_PATTERNS: Record<string, PatternMatch> = {
 };
 
 export class PatternEnginePillar {
-  private db: Pool;
+  private db: Pool | { query: Function };
   private initialized: boolean = false;
   private queryCount: number = 0;
   private cachedState: PatternEngineState | null = null;
   private stateCacheTime: number = 0;
   private readonly STATE_CACHE_TTL_MS = 60000; // 60 seconds
 
-  constructor(db: Pool) {
+  constructor(db: Pool | { query: Function }) {
     this.db = db;
   }
 
@@ -387,7 +387,7 @@ export class PatternEnginePillar {
 
 let instance: PatternEnginePillar | null = null;
 
-export function getPatternEnginePillar(db: Pool): PatternEnginePillar {
+export function getPatternEnginePillar(db: Pool | { query: Function }): PatternEnginePillar {
   if (!instance) {
     instance = new PatternEnginePillar(db);
   }
