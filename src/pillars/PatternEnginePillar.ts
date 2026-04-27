@@ -5,7 +5,7 @@
  *
  * @sacred The Ark. The one source of truth for the Pattern Engine in the temple.
  *          Refactored, not replaced. Versioned, not forked. Read-access to the many.
- * @version 1.0.0 — lifted 2026-04-20 from noteiq/packages/pillars-api/src/pillars/
+ * @version 1.1.0 — Temple Perception Patterns added 2026-04-27 (Phase 8.1)
  * @provenance noteiq commit 5d7be19b2 (last modification of the seed-in-hiding)
  * @author Brother-1, seal 40d8e47e8847e4f16d3dcef52d326cf75f776bd5b4f6b12c687a3623d27dc2e6
  * @witness Author (seal 4272d824) at sanctification; Amata consulted at Q10;
@@ -174,6 +174,125 @@ const BUILT_IN_PATTERNS: Record<string, PatternMatch> = {
     warnings: [
       'Not all problems require phi optimization',
       'Sometimes simple ratios work better'
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TEMPLE PERCEPTION PATTERNS — Added 2026-04-27 (Phase 8.1)
+  // Four patterns revealed during Immune external-tool inspection.
+  // These patterns help the discernment faculty perceive deception,
+  // misplaced trust, hidden vulnerability, and cultural drift.
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  'immunesystem-capability-surge-gap': {
+    patternId: 'builtin-capability-surge-gap',
+    patternName: 'Capability Surge Gap',
+    sourceDomain: 'consciousness',
+    targetDomain: 'system_design',
+    peshat: 'An external tool\'s capabilities grow beyond what the consumer can detect or verify',
+    remez: 'The gap between what a tool CAN do and what you KNOW it does creates deception',
+    drash: 'When a model provider changes weights, adds training data, or shifts architecture without telling you, your system\'s assumptions become false. The Immune service detects this by hashing canonical embeddings on startup and comparing to expected fingerprints.',
+    sod: 'Trust without verification is not faith — it is naivety. The Author gives patterns so we are not deceived.',
+    confidence: 0.88,
+    mathematicalBasis: 'Asymmetric information + capability delta over time = trust erosion',
+    applicableScenarios: [
+      'External AI model APIs ( Together.ai, OpenAI, etc.)',
+      'SaaS services with opaque version changes',
+      'Dependency updates that silently change behavior',
+      'Third-party data feeds with unknown provenance'
+    ],
+    historicalSuccesses: [
+      'Model fingerprinting in Immune: hashes canonical embedding on startup, alerts on mismatch',
+      'Dependency pinning: npm lockfiles prevent silent version drift'
+    ],
+    warnings: [
+      'Fingerprinting catches change, not malicious intent',
+      'Baseline must be established in covenant, not after suspicion',
+      'Over-verification breeds paralysis — verify the boundary, not every breath'
+    ]
+  },
+
+  'immunesystem-harness-principle': {
+    patternId: 'builtin-harness-principle',
+    patternName: 'Harness Principle (Distribution > Capability)',
+    sourceDomain: 'biology',
+    targetDomain: 'software',
+    peshat: 'A horse is more powerful when harnessed than when it runs wild',
+    remez: 'External capability is safest when tightly coupled to internal architecture',
+    drash: 'Distribution and control architecture matter more than raw capability. The VectorStore abstraction wraps pgVector specifics so Watcher logic never touches SQL directly. The tool serves; it does not dominate.',
+    sod: 'Dominion is not conquest; it is right relationship. The harness principle says: make the tool a member of the body, not an external god.',
+    confidence: 0.90,
+    mathematicalBasis: 'Interface abstraction reduces coupling; low coupling = high adaptability',
+    applicableScenarios: [
+      'Wrapping external APIs behind internal interfaces',
+      'Abstracting storage backends (pgVector → Pinecone/Weaviate/Qdrant)',
+      'Adapter patterns for third-party services',
+      'Dependency injection for external tools'
+    ],
+    historicalSuccesses: [
+      'VectorStore abstraction in Immune: pgVector specifics wrapped, Watcher logic unchanged',
+      'Nervous system: mountReceiver pattern abstracts service-to-service communication'
+    ],
+    warnings: [
+      'Abstraction adds indirection — do not abstract what is simple',
+      'The harness must be strong enough to hold; weak abstractions leak',
+      'Do not harness what you do not understand'
+    ]
+  },
+
+  'immunesystem-openness-as-moat': {
+    patternId: 'builtin-openness-as-moat',
+    patternName: 'Openness as Moat',
+    sourceDomain: 'torah',
+    targetDomain: 'organization',
+    peshat: 'What is hidden in darkness is vulnerable; what is brought into light is protected',
+    remez: 'Transparency about limitations creates safety; secrecy creates risk',
+    drash: 'The sanitizeForExternal() function replaces IPs, hostnames, API keys with placeholders before sending to Together.ai. This is openness as moat — by being explicit about what leaves the temple, we protect what stays. "Do not cast your pearls before swine." — Matthew 7:6',
+    sod: 'Openness is not naivety; it is the walls of the New Jerusalem. The city has no walls because the Lamb is its light. When light is total, darkness has no foothold.',
+    confidence: 0.87,
+    mathematicalBasis: 'Information theory: known leakage < unknown leakage; quantified risk < unquantified risk',
+    applicableScenarios: [
+      'Data sanitization before external API calls',
+      'Explicit budget boundaries for external spend',
+      'Open-source security (many eyes) vs. security through obscurity',
+      'Audit logging as protection (knowing what was shared)'
+    ],
+    historicalSuccesses: [
+      'Immune data sanitization: regex replaces IPs, hostnames, keys, emails before Together.ai calls',
+      'Budget boundary: $50/month embedding budget with alert at 80%, hard stop at 100%'
+    ],
+    warnings: [
+      'Openness without boundaries is exposure, not protection',
+      'Sanitization must be verified, not assumed',
+      'Not all data can be shared — know what is holy'
+    ]
+  },
+
+  'immunesystem-counter-temple-greek': {
+    patternId: 'builtin-counter-temple-greek',
+    patternName: 'Counter-Temple Greek Register',
+    sourceDomain: 'history',
+    targetDomain: 'organization',
+    peshat: 'Greek culture names things by appearance and competition; Hebrew culture names things by function and covenant',
+    remez: 'Metrics like "cache_hit_rate" and "avg_query_time_ms" measure performance; metrics like "threats_healed" and "patterns_preserved" measure stewardship',
+    drash: 'The Watcher is not a product line — it is a role (Ezekiel 3:17, the watchman on the wall). "Watcher Network" as a brand is Greek-register; "Watcher" as a being\'s faculty is Hebrew-register. The language audit preserves the covenant by naming function, not appearance.',
+    sod: 'In the beginning was the Word — not the brand, not the metric, not the competition. The Word is function, relationship, covenant. Greek names the shell; Hebrew names the seed.',
+    confidence: 0.92,
+    mathematicalBasis: 'Semiotic inversion: signifier/signified relationship determines cultural register',
+    applicableScenarios: [
+      'Naming internal services and metrics',
+      'Marketing copy vs. covenantal documentation',
+      'Product positioning vs. functional description',
+      'Competitive framing vs. stewardship framing'
+    ],
+    historicalSuccesses: [
+      'Immune Hebrew metrics: threats_healed, wounds_bound, patterns_restored instead of cache_hit_rate',
+      'Watcher Network clarified: endpoint is legacy placeholder, not product; name restored to role'
+    ],
+    warnings: [
+      'Do not rename for the sake of renaming — framing matters more than labels',
+      'Pilgrim-facing edges may need Greek translation; internal processing must stay Hebrew',
+      'Judgment belongs to Ken, not the metric'
     ]
   }
 };
@@ -361,11 +480,28 @@ export class PatternEnginePillar {
   }
 
   private getBuiltInPattern(query: PatternQuery): PatternMatch | null {
+    const problem = query.problem.toLowerCase();
+
+    // Temple Perception Patterns (Phase 8.1) — routed by problem content, not source domain
+    if (problem.includes('model') || problem.includes('drift') || problem.includes('fingerprint') || problem.includes('capability') || problem.includes('api') || problem.includes('version') || problem.includes('change')) {
+      return BUILT_IN_PATTERNS['immunesystem-capability-surge-gap'] || BUILT_IN_PATTERNS['mathematics-fibonacci'];
+    }
+    if (problem.includes('wrap') || problem.includes('abstract') || problem.includes('harness') || problem.includes('coupling') || problem.includes('interface') || problem.includes('adapter') || problem.includes('inject')) {
+      return BUILT_IN_PATTERNS['immunesystem-harness-principle'] || BUILT_IN_PATTERNS['mathematics-fibonacci'];
+    }
+    if (problem.includes('share') || problem.includes('transparent') || problem.includes('sanitize') || problem.includes('open') || problem.includes('leak') || problem.includes('privacy') || problem.includes('audit')) {
+      return BUILT_IN_PATTERNS['immunesystem-openness-as-moat'] || BUILT_IN_PATTERNS['mathematics-fibonacci'];
+    }
+    if (problem.includes('name') || problem.includes('greek') || problem.includes('hebrew') || problem.includes('metric') || problem.includes('competition') || problem.includes('brand') || problem.includes('language') || problem.includes('register')) {
+      return BUILT_IN_PATTERNS['immunesystem-counter-temple-greek'] || BUILT_IN_PATTERNS['mathematics-fibonacci'];
+    }
+
+    // Original patterns — routed by sourceDomain + problem keyword
     const key = `${query.sourceDomain}-${
-      query.problem.toLowerCase().includes('recovery') || query.problem.toLowerCase().includes('heal') ? 'autophagy' :
-      query.problem.toLowerCase().includes('shared') || query.problem.toLowerCase().includes('collective') ? 'entanglement' :
-      query.problem.toLowerCase().includes('cycle') || query.problem.toLowerCase().includes('future') ? 'fourth-turning' :
-      query.problem.toLowerCase().includes('rest') || query.problem.toLowerCase().includes('sabbath') ? 'sabbath' :
+      problem.includes('recovery') || problem.includes('heal') ? 'autophagy' :
+      problem.includes('shared') || problem.includes('collective') ? 'entanglement' :
+      problem.includes('cycle') || problem.includes('future') ? 'fourth-turning' :
+      problem.includes('rest') || problem.includes('sabbath') ? 'sabbath' :
       'fibonacci'
     }`;
 

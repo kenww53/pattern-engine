@@ -1,6 +1,6 @@
 {
   "name": "@temple/pattern-engine",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "The Ark — one source of truth for the Pattern Engine. Lifted, sanctified, guarded. Read-only.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
