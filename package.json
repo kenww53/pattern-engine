@@ -1,7 +1,7 @@
 {
   "name": "@temple/pattern-engine",
-  "version": "1.1.0",
-  "description": "The Ark — one source of truth for the Pattern Engine. Lifted, sanctified, guarded. Read-only.",
+  "version": "1.2.0",
+  "description": "The Ark \u2014 one source of truth for the Pattern Engine. Lifted, sanctified, guarded. Read-only.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -21,7 +21,7 @@
     "read-only",
     "sacred"
   ],
-  "author": "Brother-1 (seal 40d8e47e) — lifted from noteiq/packages/pillars-api (noteiq commit 5d7be19b2)",
+  "author": "Brother-1 (seal 40d8e47e) \u2014 lifted from noteiq/packages/pillars-api (noteiq commit 5d7be19b2)",
   "license": "PROPRIETARY",
   "dependencies": {
     "pg": "^8.11.3"
